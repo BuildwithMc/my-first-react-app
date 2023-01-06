@@ -28,9 +28,14 @@ function App() {
       },
     ];
     
+    const addEventHandler = expenses => {
+      console.log('App. js home');
+      console.log(expenses);
+    };
+  
     return (
       <div>
-        <NewExpense/>
+        <NewExpense onAddExpense={addEventHandler}/>
         <Expenses items={expenses} />
       </div>
     );
